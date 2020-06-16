@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        body{
+            background: darkturquoise;
+            font: normal 20pt Arial;
+            color: mediumblue;
+        }
+    </style>
+</head>
+<body>
+    Em que país você mora: <input type="text" name="pais" id="pais"><br>
+    <!--<input name="pqp" id="pqp">-->
+    <br><input type="button" value="Verificar Nacionalidade" onclick="verifica()">
+    <div id="res">
+
+    </div>
+    <script>
+        
+        //var teste = typeof(pais)
+        function verifica(){
+            var paises = document.getElementById('pais').value;
+            var pais = String(paises)
+            var pais = pais.toLocaleLowerCase()
+            var res = document.querySelector('div#res')
+            
+            if (pais === 'brasil') {
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong>.</p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>

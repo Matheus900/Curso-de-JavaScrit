@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font: normal 20pt Arial;
+        }
+        input{
+            background-color: cornflowerblue;
+            font: normal 18pt Arial;
+        }
+        /*input#trocar{
+            background-color: yellow;
+            font: normal 18pt Arial;
+        }
+        input#voltar{
+            background-color: cyan;
+            font: normal 18pt Arial;
+        }
+        div#resultado{
+            margin-top: 25px;
+        }*/
+    </style>
+</head>
+<body>
+     <h1>Somando valores:</h1>
+     <input type="number" name="txtn1" id="txtn1" placeholder="Número 1"> + 
+     <input type="number" name="txtn2" id="txtn2" placeholder="Número 2">
+     <input type="button" value="soma" id="botao" onclick="somar()">
+     <!--<input type="button" value="Amarelo" id="trocar" onclick="trocar()">
+     <input type="button" value="Normal" id="voltar" onclick="voltar()">-->
+     <br><input type="text" name="cordefundo" id="cordefundo" placeholder="Cor de Fundo">
+     <input type="button" value="Mudar a Cor de Fundo" id="aplicar" onclick="mudar_a_cor()">
+     <div id="resultado">
+        <br>Resultado<br>
+     </div>
+
+     <script>
+         function somar(){
+            var tn1 = document.getElementById('txtn1') 
+            var tn2 = document.getElementById('txtn2')
+            var resultado = document.getElementById('resultado')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            resultado.innerHTML += `A soma entre ${n1} e ${n2} é igual a <strong>${soma}<strong>`
+         }
+         /*function trocar(){
+            window.document.body.style.background = 'yellow'
+         }
+         function voltar(){
+            window.document.body.style.background = 'aquamarine'
+         }*/
+         function mudar_a_cor(){
+             var cor = document.getElementById('cordefundo').value;
+             document.body.style.background = cor
+             //alert(cores)
+         }
+     </script>
+</body>
+</html>

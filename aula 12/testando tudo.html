@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Tudo</title>
+    <style>
+        body{
+            background: aquamarine;
+            font: normal 20pt Arial;
+            }   
+    </style>
+</head>
+<body>
+    
+    <div id="res">
+        Qual a sua idade?<input type="number" name="idade" id="idade">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </div>
+    <div id='resul'>
+
+    </div>
+    <script>
+        function verificar(){
+            var idade = document.querySelector('input#idade').value
+            if (idade < 16){
+                alert('Não Vota')
+            }else if (idade < 18 || idade > 65){
+                alert('Voto Opicional')
+            }else {
+                alert('Voto Obrigatório')
+            }
+        }
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        var minutos = agora.getMinutes()
+        var hora = agora.getHours()
+        var segundos = agora.getSeconds()
+        var res = document.querySelector('div#res')
+        var resul = res.innerHTML
+        var resulta = document.querySelector('div#resul')
+        var resultado = resulta.innerHTML
+        var idade = document.querySelector('input#idade').value
+
+
+        switch(diaSem){
+            case 0:
+                var dia = 'Domingo'
+                resul += document.write(`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+            case 1:
+                var dia = 'Segunda-Feira'
+                resul += document.write(`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+            case 2:
+                var dia = 'Terça-Feira'
+                resul += document.write(`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+            case 3:
+                var dia = 'Quarta-Feira'
+                resul += document.write(`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+            case 4:
+                var dia = 'Quinta-Feira'
+                resul += document.write(`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+            case 5:
+                var dia = 'Sexta-Feira'
+                resul += document.write(`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+            case 6:
+                var dia = 'Sábado'
+                resul += document.write(ln`Hoje é ${dia}!<br>`)
+                resultado += document.write(`Agora são exatamente ${hora}h: ${minutos}min: ${segundos}sec.`)
+                break
+        }
+    </script>
+</body>
+</html>
